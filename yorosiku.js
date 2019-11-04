@@ -19,7 +19,7 @@ client.on("guildMemberAdd" , async member => {
 		member.guild.channels.get("557151054723022859").send({
 			  files: [{
     			attachment: files,
-    			name: 'ようこそ.jpg'
+    			name: 'ようこそ.gif
       				}]
 		});
 	})
