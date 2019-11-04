@@ -15,8 +15,9 @@ client.on('ready', () => {
 });
 
 client.on("guildMemberAdd" , async member => {
-	client.channels.get("557151054723022859").send(image[Math.floor( Math.random() * image.length )])
-
+	fs.readFile(`./gif file/${image[Math.floor( Math.random() * image.length )]}`, async (err, files) => {
+		client.channels.get("557151054723022859").send(files)
+	})
 });
 
 
