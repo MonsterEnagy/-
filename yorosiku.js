@@ -5,6 +5,10 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
+client.on("guildMemberAdd" , async member => {
+
+
+});
 
 
 client.login(process.env.token);
