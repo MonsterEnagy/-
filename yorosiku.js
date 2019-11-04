@@ -5,10 +5,9 @@ var channel = "617577875574620160"
 
 let image = [];
 fs.readdir('./gif file', function(err, files){
-	console.log(files)
-	//if(err) return throw new Error();
+	if(err) return throw new Error();
 	for(var i = 0; i < files.length; i++){
-		console.log(files)
+		image.push(files[i])
 	}
 });
 
@@ -17,7 +16,7 @@ client.on('ready', () => {
 });
 
 client.on("guildMemberAdd" , async member => {
-	client.channels.get("557151054723022859").send()
+	client.channels.get("557151054723022859").send(image[Math.floor( Math.random() * image.length )])
 
 });
 
