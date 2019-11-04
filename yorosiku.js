@@ -5,8 +5,8 @@ var channel = "617577875574620160"
 
 let image = [];
 fs.readdir('./gif file', function(err, files){
-	for(var i = 0; i < files.length; i++){
-		image.push(files[i])
+	for(var i = 1;  i <= files.length; i++){
+		image.push(files[i - 1])
 	}
 });
 
